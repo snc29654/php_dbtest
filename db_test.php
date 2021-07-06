@@ -66,6 +66,10 @@ try{
   <body>
 
 <?php
+	file_put_contents("../db_log.txt", $row['id']."\n",FILE_APPEND);
+	file_put_contents("../db_log.txt", $row['kind']."\n",FILE_APPEND);
+	file_put_contents("../db_log.txt", $row['contents']."\n",FILE_APPEND);
+    
     echo $row['id'];      echo " ";
     echo $row['kind'];   echo " ";   
     echo $row['contents']; 		echo "<br />";
