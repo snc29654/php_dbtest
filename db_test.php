@@ -6,6 +6,10 @@ $pass = "";
 $dbname = "memo"; 
 $dbtable = "kind"; 
 if(!$_POST['kind'] || !$_POST['contents']){exit("未入力あり");}
+
+file_put_contents("../from_html.txt", $_POST['kind'] ."\n",FILE_APPEND);
+file_put_contents("../from_html.txt", $_POST['contents']."\n",FILE_APPEND);
+
 try{
 	
 	$dsn = "mysql:dbname=memo;host=localhost;charset=utf8;";
